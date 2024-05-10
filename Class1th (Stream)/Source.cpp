@@ -1,77 +1,106 @@
-﻿#include <iostream> // InputOutputStream
+﻿#include <iostream> 
 
-char character = 'A';
+using namespace std;
 
-void Recovery(int& health)
+namespace A
 {
-	health = 100;
+	int data = 10;
+
+	void Function()
+	{
+		cout << "A의 기능" << endl;
+	}
+
 }
+
+namespace B
+{
+	int data = 20;
+
+	void Function()
+	{
+		cout << "B의 기능" << endl;
+	}
+}
+
+class Unit
+{
+#pragma region 접근 지정자
+	//클래스 내부의 포함되어 있는 속성에 접근 범위를
+	// 제한하는 지정자입니다.
+
+	// public				 : 클래스 외부에서 데이터를 접근할 수 있도록           // 쉽게 설명하자면, class 말고도 다른 부분에서도 수정이 가능하다는거 같음
+	//								          허용하는 접근 지정자입니다.
+
+	//protected : 클래스 내부와 자기가 상속하고 있는 클래스에서만
+	//											접근을 허용하는 접근 지정자입니다.
+
+	// private			: 클래스 내부에서만 접근을 허용하는 접근 지정자입니다.		// 애는 그냥 고정된 값 같음 그니까, 몬스터 같은거 고정 HP 같은거 아닐까 ?
+
+
+#pragma endregion
+
+private:
+	int health = 100;
+	double defense = 5.5;
+public:
+	void Move()
+	{
+		cout << "Unit Move" << endl;
+	}
+
+	void Information() const
+	{
+		cout << "Health : " << health << endl;
+		cout << "Defense : " << defense << endl;
+	}
+};
 
 int main()
 {
-#pragma region 스트림 (Stream)
-	// 시간의 흐름에 따라 연속적으로 발생하는 데이터의 흐름입니다.
+#pragma region 이름 공간 (Name Space)
+	// 속성을 구분할 수 있도록 유효 범위를
+	// 설정하는 영역입니다.
 
-	// 삽입 연산자 (<<)
-	// 스트림의 경우 입력된 데이터는 출력 장치로 전달하며,
-	// "<<" 연산자를 사용하여 자신이 참조한 값을 반환합니다.
+	//cout << "A namespace에 있는 data 값 : " << A::data << endl;
+	//cout << "B namespace에 있는 data 값 : " << B::data << endl;
 
-	//	std::cout << "C++ Langueage" << std::endl;
-	//	std::cout << "C# Langueage" << std::endl;
-
-	// 스트림은 운영체제에 의해 생성되며, 스트림 자체에 버퍼라는
-	// 임시 메모리 공간이 존재합니다.
-
-	// 추출 연산자 (>>)
-	// 스트림으로 입력받을 때 ">>" 연산자를 사용하여 버퍼에 저장한 다음
-	// NULL 문자까지만 버퍼 안의 내용을 출력합니다.
-
-	//	int data = 0;
-	//	std::cin >> data;
-	//	std::cout << "Data의 값 : " << data;
-
-	//		int* ptr = new int;
-	//		int* dynamicArray = new int[5];
-	//		
-	//		dynamicArray[4] = 99;
-	//		*ptr = 100;
-	//		
-	//		std::cout << "dynamicArray[4]의 값 : " << dynamicArray[4] << std::endl;
-	//		std::cout << "ptr이 가리키는 값 : " << *ptr << std::endl;
-	//		
-	//		delete ptr;
-	//		delete[] dynamicArray;
+	// 이름 공간은 같은 이름의 함수나 변수를 또 다른
+	// 공간에 선언하여 중복되지 않도록 선언할 수 있습니다.
 
 #pragma endregion
 
-#pragma region 범위 지정 연산자
-	// 여러 범위에서 사용되는 식별자를 구분하는데 사용하는 
-	// 연산자 입니다.
+#pragma region 범위 기반 반복문
+		//			int list[5] = { 10,20,30,40,50 };
+		//			
+		//			for (const int & element : list)
+		//			{
+		//				cout << element << endl;
+		//			}
 
-	//char character = 'W';
-	//
-	//std::cout << "character 변수의 값 : " << character << std::endl;
-	//std::cout << "character 전역 변수의 값 : " << ::character << std::endl;
-
-	// 범위 지정 연산자는 전역 변수와 같은 이름의 지역 변수가
-	// 선언되었을 때 가까운 범위에 선언된 변수의 이름을 사용하는
-	// 범위 규칙이 존재하기 때문에 전역 변수가 호출되지 않습니다.
-#pragma endregion
-
-#pragma region 참조자
-
-	int health = 100;
-
-	int& reference = health;
-
-	reference -= 50;
-
-	Recovery(health);
-
-	std::cout << "health의 값 : " << health << std::endl;
 
 #pragma endregion
 
+#pragma region 클래스(class)
+	//사용자정의 데이터 유형으로 속성과 함수가
+	// 포함되어 있으며, 클래스를 통해 객체를 생성하여
+	// 접근하고 사용할 수 있는 집합체입니다.
+
+	//	Unit unit;
+	//	
+	//	cout << "Unit 클래스의 크기는 : " << sizeof(Unit) << " byte" <<  endl;
+	//	
+	//	unit.Move();
+	//	unit.Information();
+
+	int x = 10;
+
+	int* ptr = &x;
+
+	//클래스의 경우 클래스 내부에 있는 변수는 클래스의
+	// 메모리 영역에 포함되지만, 정적 변수와 함수의
+	// 메모리는 클래스 영역에 포함되지 않습니다.
+#pragma endregion
 
 
 	return 0;

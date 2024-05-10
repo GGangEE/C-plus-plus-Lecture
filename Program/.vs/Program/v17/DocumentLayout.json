@@ -8,6 +8,9 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{F69914B8-CE0D-40FB-9A3A-278EFA75EA34}|..\\Class1th (Stream)\\Class1th (Stream).vcxproj|F:\\coding\\C\u002B\u002B\\Class1th (Stream)\\Source.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ABD1DA90-B893-4DD5-9410-E582347D50C9}|..\\Class2th (Class)\\Class2th (Class).vcxproj|F:\\coding\\C\u002B\u002B\\Class2th (Class)\\Source.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -17,8 +20,25 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Source.cpp",
+              "DocumentMoniker": "F:\\coding\\C\u002B\u002B\\Class2th (Class)\\Source.cpp",
+              "RelativeDocumentMoniker": "..\\Class2th (Class)\\Source.cpp",
+              "ToolTip": "F:\\coding\\C\u002B\u002B\\Class2th (Class)\\Source.cpp",
+              "RelativeToolTip": "..\\Class2th (Class)\\Source.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-05-10T10:41:05.539Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -27,14 +47,10 @@
               "RelativeDocumentMoniker": "Program.cpp",
               "ToolTip": "F:\\coding\\C\u002B\u002B\\Program\\Program.cpp",
               "RelativeToolTip": "Program.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAUAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-05-09T10:37:18.526Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
@@ -44,7 +60,7 @@
               "RelativeDocumentMoniker": "..\\Class1th (Stream)\\Source.cpp",
               "ToolTip": "F:\\coding\\C\u002B\u002B\\Class1th (Stream)\\Source.cpp",
               "RelativeToolTip": "..\\Class1th (Stream)\\Source.cpp",
-              "ViewState": "AQIAADYAAAAAAAAAAAAkwEEAAAAAAAAA",
+              "ViewState": "AQIAAEMAAAAAAAAAAAAQwGsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-05-09T10:38:25.596Z",
               "EditorCaption": ""
